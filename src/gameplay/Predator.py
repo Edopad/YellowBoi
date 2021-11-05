@@ -1,0 +1,4 @@
+
+
+class Predator:
+	pass

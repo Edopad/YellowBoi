@@ -1,0 +1,4 @@
+
+
+class Prey:
+	pass
