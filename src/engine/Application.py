@@ -1,4 +1,5 @@
 import pygame
+from engine.ApplicationTheme import ApplicationTheme
 #todo: implement or exclude keyboardManager
 
 
@@ -14,7 +15,7 @@ class Application:
 		self.__screen = None
 		#self.__clock
 		self.__running = False
-		self.__theme = ApplicationTheme()
+		#self.__theme
 		
 		#Initialize parameters with default values.
 		self.target_fps = 60
@@ -23,9 +24,11 @@ class Application:
 		
 		#Initialize pygame. Not sure if this should be here.
 		pygame.init()
+		pygame.font.init()
 		
-		#Initialize private variables which require pygame initialization.
+		#Initialize private variables which require pygame module(s) initialization.
 		self.__clock = pygame.time.Clock()
+		self.__theme = ApplicationTheme()
 	
 	
 	
@@ -58,11 +61,11 @@ class Application:
 		#Encompass update/render loop for error catching.
 		#TODO: Review this, since this is basically a debug statement.
 		try:
-			print("Scene Manager: Exiting game. Reason: {}.".format(self.main_loop()))
+			print("Exiting application. Reason: {}".format(self.main_loop()))
 			#Safely exited.
 		except Exception as error:
 			#Exited on bad terms (due to uncaught error)!
-			print("Exiting game on bad terms (due to uncaught error).")
+			print("Exiting application on bad terms (due to uncaught error). Error details:")
 			print(repr(error))
 			print("Press enter to continue.")
 			input()
