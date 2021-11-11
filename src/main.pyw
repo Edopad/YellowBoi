@@ -14,7 +14,7 @@ def main():
 	
 	#Run the application, with initial scene being the Main Menu scene, and resolution of 720p.
 	app.run( \
-		initial_scene = MainMenuScene(), \
+		initial_scene = MainMenuScene(first_run = True), \
 		starting_window_size = (1280, 720) \
 	)
 
