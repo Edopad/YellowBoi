@@ -1,7 +1,7 @@
-import engine.Scene
-import scene.CreditsScene
-import scene.MainMenuScene
-import scene.PauseScene
-import scene.PlayScene
-import scene.PostGameScene
-import scene.PreGameScene
+from scenes.CreditsScene   import CreditsScene
+from scenes.MainMenuScene  import MainMenuScene
+from scenes.PauseGameScene import PauseGameScene
+from scenes.PlayGameScene  import PlayGameScene
+from scenes.PostGameScene  import PostGameScene
+from scenes.PreGameScene   import PreGameScene
+from scenes.SettingsScene  import SettingsScene

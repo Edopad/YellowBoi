@@ -1,4 +1,6 @@
+from pygame.sprite import Sprite
 
 
-class Predator:
+
+class Predator(Sprite):
 	pass

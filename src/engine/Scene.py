@@ -8,21 +8,23 @@ class Scene:
 
 	def __del__(self):
 		"""Called on scene deletion (garbage collection). Here for debugging."""
-		#print("Scene {} deleted.".format(self.get_name()))
-		pass
+		
+		#debug statement(s)
+		print("Scene {} deleted.".format(self.get_name()))
 
 	def get_name(self):
 		"""Here for naming purposes. Can be overridden for manual control over scene name."""
 		return self.__class__.__name__
 
-	def update(self, delta):
+	def update(self, app, delta):
 		"""Update scene objects, check user input, etc."""
+		
+		#debug statement(s)
 		print("Scene {} has no update method!".format(self.get_name()))
+		app.switch_scene(None)
 
-	def render(self):
+	def render(self, screen):
 		"""Render scene objects, buttons, text, etc."""
+		
+		#debug statement(s)
 		print("Scene {} has no render method!".format(self.get_name()))
-
-	def pause(self):
-		"""Called when an external object wants the game to pause, like when FPS is too low."""
-		pass

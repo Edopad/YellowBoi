@@ -2,5 +2,5 @@ from pygame.sprite import Sprite
 
 
 
-class Prey(Sprite):
+class UIButton(Sprite):
 	pass

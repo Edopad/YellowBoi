@@ -1,4 +1,7 @@
+from pygame.sprite import Sprite
 import Dot
+
+
 
 class Board:
 	__perimeter_height = 300

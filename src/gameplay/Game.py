@@ -1,5 +1,6 @@
 
 
+
 class Game:
 	def __init__(self):
 		self._lives = 3
