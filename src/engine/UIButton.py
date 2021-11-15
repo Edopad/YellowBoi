@@ -1,4 +1,5 @@
 from pygame.sprite import Sprite
+import pygame as pyg
 
 
 
@@ -8,7 +9,7 @@ class UIButton(Sprite):
 		self.__text = text
 		self.__highlighted = False
 		self.__active = True
-		self.__bounding_box
+		self.__bounding_box = pyg.Rect(0, 0, width, height)
 
 	def set_active_status(self, status):
 		self.__active = status
