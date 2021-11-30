@@ -1,9 +1,12 @@
 from engine import Scene
+from pygame.Surface import Surface
 
 
 
 class MainMenuScene(Scene):
 	"""Scene template class."""
+
+	 #_title_text = 
 	
 	def __init__(self, first_run = False):
 		"""Called on scene creation."""
