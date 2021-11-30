@@ -3,4 +3,8 @@ from pygame.sprite import Sprite
 
 
 class Predator(Sprite):
-	pass
+	
+	def move():
+		pass
+
+	
