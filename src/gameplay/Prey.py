@@ -12,8 +12,9 @@ class Prey(Sprite):
 		self.__pos_x = x
 		self.__pos_y = y
 
-	def move():
-		pass
+	def move(self, x, y):
+		self.__pos_x += x
+		self.__pos_y += y
 	
 	def update_living_status(status):
 		__still_alive = status
