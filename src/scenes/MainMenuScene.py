@@ -17,6 +17,11 @@ class MainMenuScene(Scene):
 		self._title_text = None
 		self._play_button = None
 		self._background_image = None
+		self._play_button = None
+		self._settings_button = None
+		self._credits_button = None
+		self._exit_button = None
+		self._current_button_index = None
 	
 	def update(self, app, delta):
 		"""Update scene objects, check user input, etc."""
