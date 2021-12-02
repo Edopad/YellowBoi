@@ -1,4 +1,6 @@
 from engine import Scene
+from engine import UIButton
+
 #TODO: Figure out importing Surface from pygame
 #from pygame import Surface
 
@@ -14,8 +16,8 @@ class MainMenuScene(Scene):
 		super(type(self),self).__init__()
 		
 		self.__first_run = first_run
-		self._title_text = None
-		self._play_button = None
+		self._title_text = UIButton("Yellow Boi", 300, 140)
+		self._play_button = UIButton("Play", 300, 140)
 		self._background_image = None
 		self._play_button = None
 		self._settings_button = None
