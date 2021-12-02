@@ -47,4 +47,5 @@ class MainMenuScene(Scene):
 	
 	def render(self, screen):
 		"""Render scene objects, buttons, text, etc."""
+		
 		pass
