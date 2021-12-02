@@ -1,15 +1,12 @@
 from engine import Scene
-from pygame.Surface import Surface
+#TODO: Figure out importing Surface from pygame
+#from pygame import Surface
 
 
 
 class MainMenuScene(Scene):
 	"""Scene template class."""
-
-	_title_text = Surface
-	_background_image = Surface
-	#Where does UIButton come from?
-	#_play_button = UIButton
+	
 	
 	def __init__(self, first_run = False):
 		"""Called on scene creation."""
@@ -17,6 +14,9 @@ class MainMenuScene(Scene):
 		super(type(self),self).__init__()
 		
 		self.__first_run = first_run
+		self._title_text = None
+		self._play_button = None
+		self._background_image = None
 	
 	def update(self, app, delta):
 		"""Update scene objects, check user input, etc."""
