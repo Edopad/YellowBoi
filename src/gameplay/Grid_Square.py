@@ -1,11 +1,11 @@
-from pygame import Rect
+from pygame.sprite import Sprite
 import Dot
 
-class Grid_Square(Rect):
+class Grid_Square(Sprite):
     
     def __init__(self, x, y):
         super().__init__(x, y, 30, 30)
-        self.__textureID = 0
+        self.__textureID = None
 
 class Path(Grid_Square):
     
