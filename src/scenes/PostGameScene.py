@@ -9,6 +9,9 @@ class PostGameScene(Scene):
 		"""Called on scene creation."""
 		#call superclass constructor
 		super(type(self),self).__init__()
+
+		self._continue_button = UIButton("Continue ?", 300, 140)
+		self._game_over_text = UIButton("GAME OVER", 300, 140)
 	
 	def update(self, app, delta):
 		"""Update scene objects, check user input, etc."""

@@ -9,7 +9,13 @@ class SettingsScene(Scene):
 		"""Called on scene creation."""
 		#call superclass constructor
 		super(type(self),self).__init__()
-	
+
+		self.__ai_error_checking = True
+		self.__sfx_volume = 100
+		self.__music_volume = 100
+		self.__theme = None
+		self.__close_button = UIButton("Close", 300, 140)
+
 	def update(self, app, delta):
 		"""Update scene objects, check user input, etc."""
 		pass
