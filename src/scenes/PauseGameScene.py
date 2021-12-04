@@ -10,9 +10,9 @@ class PauseGameScene(Scene):
 		#call superclass constructor
 		super(type(self),self).__init__()
 
-		self._resume_button = UIButton("Resume", 300, 140)
-		self._exit_button = UIButton("Exit", 300, 140)
-		self._pause_text = UIButton("Pause", 300, 140)
+		self.__resume_button = UIButton("Resume", 300, 140)
+		self.__exit_button = UIButton("Exit", 300, 140)
+		self.__pause_text = UIButton("Pause", 300, 140)
 
 	def update(self, app, delta):
 		"""Update scene objects, check user input, etc."""

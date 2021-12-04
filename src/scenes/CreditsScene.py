@@ -10,8 +10,8 @@ class CreditsScene(Scene):
 		#call superclass constructor
 		super(type(self),self).__init__()
 
-		self._credits_render = UIButton("Credits", 300, 140)
-		self._close_button = UIButton("Close", 300, 140)
+		self.__credits_render = UIButton("Credits", 300, 140)
+		self.__close_button = UIButton("Close", 300, 140)
 	
 	def update(self, app, delta):
 		"""Update scene objects, check user input, etc."""

@@ -16,14 +16,14 @@ class MainMenuScene(Scene):
 		super(type(self),self).__init__()
 		
 		self.__first_run = first_run
-		self._title_text = UIButton("Yellow Boi", 300, 140)
-		self._play_button = UIButton("Play", 300, 140)
-		self._background_image = None
-		self._play_button = None
-		self._settings_button = None
-		self._credits_button = None
-		self._exit_button = None
-		self._current_button_index = None
+		self.__title_text = UIButton("Yellow Boi", 300, 140)
+		self.__play_button = UIButton("Play", 300, 140)
+		self.__background_image = None
+		self.__play_button = None
+		self.__settings_button = None
+		self.__credits_button = None
+		self.__exit_button = None
+		self.__current_button_index = None
 	
 	def update(self, app, delta):
 		"""Update scene objects, check user input, etc."""
