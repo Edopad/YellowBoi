@@ -1,5 +1,9 @@
+import scenes
 from engine import Scene
 from engine import UIButton
+from gameplay import Game
+
+
 
 #TODO: Figure out importing Surface from pygame
 #from pygame import Surface
@@ -32,8 +36,11 @@ class MainMenuScene(Scene):
 		if self.__first_run:
 			self.__first_run = False
 			
+			#proof-of-concept game board testing
+			app.switch_scene(scenes.PlayGameScene(Game()))
+			
 			#proof-of-concept code for AI selection
-			import tkinter, tkinter.filedialog
+			'''import tkinter, tkinter.filedialog
 			root = tkinter.Tk()
 			root.withdraw()
 			
@@ -42,7 +49,7 @@ class MainMenuScene(Scene):
 				multiple = False, \
 				initialdir = "..\\data\\AIs", \
 				filetypes = [("Python File", "*.py"), ("All Files", "*.*")], \
-			)
+			)'''
 			
 	
 	def render(self, screen):

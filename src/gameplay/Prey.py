@@ -1,5 +1,5 @@
 from pygame.sprite import Sprite
-import AIPlayer
+from gameplay import AIPlayer
 
 
 

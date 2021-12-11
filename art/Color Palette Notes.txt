@@ -1,0 +1,10 @@
+Reference for (mostly) original PacMan assets:
+http://labs.phaser.io/assets/games/pacman/
+
+
+Dark(er) yellow: #FFD800
+Middle yellow:   #F8E525
+Light yellow:    #F1F14A
+
+Dark Purple:     #642D89
+Middle Purple:   #C056E5

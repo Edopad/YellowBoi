@@ -1,5 +1,5 @@
 from engine import Scene
-
+import scenes
 
 
 class CreditsScene(Scene):

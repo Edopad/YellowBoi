@@ -1,17 +1,47 @@
+import engine
 from pygame.sprite import Sprite
+#from pygame import Color
+import pygame.color
+
 
 class Dot(Sprite):
 
-	def __init__(self):
-		super().__init__()
-		self.respawn_timer = 30
-		self.__visible = True
-
-	def respawn(self):
-		self.__visible = True
+	def __init__(self, position, start_spawned = True, does_auto_respawn = True, respawn_timer_reset = 30, respawn_timer_initial = -1):
+		#call superclass constructor
+		super(type(self),self).__init__()
+		#create graphics and collider
+		#load image
+		#self.image = pygame.Surface([4, 4])
+		#self.image.fill(Color())
+		self.image = engine.load_image("Dot.png")
+		#self.image.fill(pygame.Color(0,0,0))
+		#position object
+		#self.rect = self.image.get_rect()
+		#self.rect.x, self.rect.y = game.cd_to_px((position[0], position[1]))
+		self.rect = position
+		#initialize private variables
+		self.__spawned = start_spawned
+		self.__does_auto_respawn = does_auto_respawn
+		self.__respawn_timer_reset = respawn_timer_reset
+		self.__respawn_timer_value = respawn_timer_initial# if (respawn_timer_initial != None) else -1
 	
-	def consume(self):
-		self.__visible = False
-
+	def respawn(self):
+		self.__spawned = True
+	
+	def despawn(self):
+		self.__spawned = False
+		self.__respawn_timer_value = self.__respawn_timer_reset
+	
 	def get_visible(self):
-		return self.__visible
+		#A dot is visible if its respawn timer value is less than 0.
+		return self.__spawned
+	
+	def update():
+		#decrement timer
+		self.respawn_timer = self.respawn_timer - 1
+		#check if dot should automatically respawn
+		if self.__respawn_timer == -1 and self.__does_auto_respawn:
+			self.respawn()
+
+	def draw(self, surface):
+		surface.blit(self.image, self.rect)

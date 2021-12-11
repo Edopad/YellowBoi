@@ -60,7 +60,8 @@ class Application:
 		
 		#Encompass update/render loop for error catching.
 		#TODO: Review this, since this is basically a debug statement.
-		try:
+		self.main_loop()
+		'''try:
 			print("Exiting application. Reason: {}".format(self.main_loop()))
 			#Safely exited.
 		except Exception as error:
@@ -68,7 +69,7 @@ class Application:
 			print("Exiting application on bad terms (due to uncaught error). Error details:")
 			print(repr(error))
 			print("Press enter to continue.")
-			input()
+			input()'''
 		
 		#TODO: Perform some cleanup of pygame things, if necessary.
 		
