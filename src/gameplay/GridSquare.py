@@ -3,6 +3,9 @@ import gameplay
 import engine
 import pygame.surface
 from pygame import Rect
+import pygame
+
+
 
 class GridSquare(Sprite):
 	def __init__(self, game, position, traversable, texture_id = 0):
@@ -12,16 +15,17 @@ class GridSquare(Sprite):
 		self.__traversable = traversable
 		
 		#create graphics and collider
-		#load image
-		self.image = engine.load_image("Tileset_Default.png")#("Tileset_Default.png")
-		#self.image.fill(pygame.Color(0,0,0))
+		if self.__texture_id < 0x90:
+			self.image = engine.load_spritemap("board_tiles_2x").subsurface(Rect(16*(self.__texture_id % 4), 16*(self.__texture_id // 16), 16, 16))
+		else:
+			self.image = pygame.Surface((16, 16), flags = pygame.HWSURFACE | pygame.SRCALPHA)
 		#position object
 		self.rect = Rect(0,0,16,16)#self.image.get_rect()
 		self.rect.x, self.rect.y = game.cd_to_px((position[0], position[1]))
-		
+		#add dot to this tile if necessary
 		if texture_id == 0x91:
 			self.__dot = gameplay.Dot(self.rect)
-
+	
 	def is_traversable(self):
 		return self.__traversable
 
@@ -30,8 +34,8 @@ class GridSquare(Sprite):
 			self.__dot.update()
 	
 	def draw(self, surface):
-		#return surface.blit(self.image, self.rect, Rect(0,0,16,16))
-		surface.blit(self.image, self.rect, Rect(16*(self.__texture_id % 4), 16*(self.__texture_id // 16), 16, 16))
+		#draw the tile texture
+		surface.blit(self.image, self.rect)
 		#draw the dot this space contains, if it has one
 		if self.__dot:
 			self.__dot.draw(surface)
@@ -39,6 +43,7 @@ class GridSquare(Sprite):
 
 		
 
+#For the time being, the class structure for paths and blockades is not being used.
 '''
 class Path(GridSquare):
 	def __init__(self, position, path_type = 0):

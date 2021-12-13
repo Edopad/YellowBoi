@@ -52,11 +52,12 @@ class Board(Sprite):
 		
 		BOARD_SCALING_FACTOR = 16
 		self.rect = Rect(0, 0, BOARD_SCALING_FACTOR * 28, BOARD_SCALING_FACTOR * 31)
+		self.rect.center = (1280//2, 720//2)
 	
 	def initialize_level(self, game):
 		for y in range(len(self.__grid_square_matrix)):
 			for x in range(len(self.__grid_square_matrix[0])):
-				self.__grid_square_matrix[y][x] = GridSquare(game, (x,y), False, BOARD_ARRAY[y][x])
+				self.__grid_square_matrix[y][x] = GridSquare(game, (x, y), False, BOARD_ARRAY[y][x])
 		
 
 	def update(self):

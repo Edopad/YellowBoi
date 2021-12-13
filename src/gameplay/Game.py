@@ -4,7 +4,8 @@ import pygame.surface
 import engine
 
 class Game:
-	def __init__(self):
+	def __init__(self, theme):
+		self.__theme = theme
 		self.__lives = 3
 		self.__score = 0
 		self.__time = 0
@@ -35,7 +36,7 @@ class Game:
 		return True
 	
 	def draw(self, surface):
-		surface.fill(Color(0,0,0))
+		surface.fill(Color(7, 3, 44))
 		self.__board.draw(surface)
 		
 			

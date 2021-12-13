@@ -37,7 +37,7 @@ class MainMenuScene(Scene):
 			self.__first_run = False
 			
 			#proof-of-concept game board testing
-			app.switch_scene(scenes.PlayGameScene(Game()))
+			app.switch_scene(scenes.PlayGameScene(Game(app.theme)))
 			
 			#proof-of-concept code for AI selection
 			'''import tkinter, tkinter.filedialog

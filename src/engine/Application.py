@@ -31,7 +31,6 @@ class Application:
 		self.__theme = ApplicationTheme()
 	
 	
-	
 	def run(self, initial_scene, starting_window_size = (1280, 720)):
 		"""Runs the application, given some initial values."""
 		
@@ -62,6 +61,7 @@ class Application:
 		#TODO: Review this, since this is basically a debug statement.
 		self.main_loop()
 		'''try:
+			self.main_loop()
 			print("Exiting application. Reason: {}".format(self.main_loop()))
 			#Safely exited.
 		except Exception as error:
@@ -141,3 +141,8 @@ class Application:
 			if   evt.type == pygame.QUIT:    return "Window closed."
 			elif evt.type == pygame.KEYDOWN: return None#keyboardManager.down_event(evt)
 			elif evt.type == pygame.KEYUP:   return None#keyboardManager.up_event(evt)
+	
+	@property
+	def theme(self):
+		"""Getter for the current application theme."""
+		return self.__theme

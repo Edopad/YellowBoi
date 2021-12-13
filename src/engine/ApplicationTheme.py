@@ -31,8 +31,9 @@ class ApplicationTheme:
 		#text in the credits Scene
 		self.ui_credits_text_font                   = SysFont('Calibri', 48, bold = False, italic = False)
 		self.ui_credits_text_color                  = Color(255, 255, 255)
-	
-	
+		
+		#gameplay background color
+		self.gameplay_bg_color = Color(7, 3, 44)
 	
 	def load_from_file(self, filename):
 		pass

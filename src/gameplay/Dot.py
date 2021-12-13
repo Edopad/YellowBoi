@@ -11,13 +11,8 @@ class Dot(Sprite):
 		super(type(self),self).__init__()
 		#create graphics and collider
 		#load image
-		#self.image = pygame.Surface([4, 4])
-		#self.image.fill(Color())
-		self.image = engine.load_image("Dot.png")
-		#self.image.fill(pygame.Color(0,0,0))
+		self.image = engine.load_image("board", "dot_2x.png")
 		#position object
-		#self.rect = self.image.get_rect()
-		#self.rect.x, self.rect.y = game.cd_to_px((position[0], position[1]))
 		self.rect = position
 		#initialize private variables
 		self.__spawned = start_spawned
