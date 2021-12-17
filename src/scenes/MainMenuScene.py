@@ -40,7 +40,7 @@ class MainMenuScene(Scene):
 			app.switch_scene(scenes.PlayGameScene(Game(app.theme)))
 			
 			#proof-of-concept code for AI selection
-			'''import tkinter, tkinter.filedialog
+			import tkinter, tkinter.filedialog
 			root = tkinter.Tk()
 			root.withdraw()
 			
@@ -49,7 +49,7 @@ class MainMenuScene(Scene):
 				multiple = False, \
 				initialdir = "..\\data\\AIs", \
 				filetypes = [("Python File", "*.py"), ("All Files", "*.*")], \
-			)'''
+			)
 			
 	
 	def render(self, screen):
